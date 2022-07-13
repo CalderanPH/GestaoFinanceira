@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/nomeUsuario"
+        android:layout_width="297dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/nomeUsuario"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextNomeUser"
+        android:layout_width="297dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/nomeUsuario"
+        app:layout_constraintTop_toBottomOf="@+id/nomeUsuario" />
+
+    <TextView
+        android:id="@+id/textViewContas"
+        android:layout_width="297dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/contasPagar"
+        app:layout_constraintStart_toStartOf="@+id/editTextNomeUser"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <CheckBox
+        android:id="@+id/checkBoxAluguel"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/checkAluguel"
+        app:layout_constraintStart_toStartOf="@+id/textViewContas"
+        app:layout_constraintTop_toBottomOf="@+id/textViewContas" />
+
+    <CheckBox
+        android:id="@+id/checkBoxMercado"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/checkMercado"
+        app:layout_constraintStart_toStartOf="@+id/checkBoxAluguel"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxAluguel" />
+
+    <Button
+        android:id="@+id/buttonLimpar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:onClick="desmarcarTodos"
+        android:text="@string/buttonLimpar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+    <Button
+        android:id="@+id/buttonSalvar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="32dp"
+        android:onClick="salvar"
+        android:text="@string/buttonSalvar"
+        app:layout_constraintStart_toEndOf="@+id/buttonLimpar"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/sexoUser"
+        app:layout_constraintTop_toBottomOf="@+id/sexoUser">
+
+        <RadioButton
+            android:id="@+id/radioButtonMas"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="@string/radioMas" />
+
+        <RadioButton
+            android:id="@+id/radioButtonFem"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="@string/radioFem" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/sexoUser"
+        android:layout_width="297dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/sexoUser"
+        app:layout_constraintStart_toStartOf="@+id/editTextNomeUser"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNomeUser" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="297dp"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toStartOf="@+id/textViewVeencimento"
+        app:layout_constraintTop_toBottomOf="@+id/textViewVeencimento" />
+
+    <TextView
+        android:id="@+id/textViewVeencimento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/vencimento"
+        app:layout_constraintStart_toStartOf="@+id/checkBoxMercado"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxMercado" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
